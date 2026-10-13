@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="VELOOP Rewards Data Analytics — a portfolio blueprint for data quality, product analytics, KPI design, and dashboard planning.">
+  <title>VELOOP | Rewards Data Analytics</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0b1020;--panel:#121b30;--line:#26334d;--text:#edf3ff;--muted:#9baac4;--mint:#7ce7c4;--blue:#8aaeff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#1a3150 0,transparent 42%),var(--bg);color:var(--text);font:16px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit} .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0;border-bottom:1px solid #ffffff14}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:750;letter-spacing:.04em}.mark{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--mint),var(--blue));display:grid;place-items:center;color:#091322;font-weight:900}
+    .navlink{font-size:14px;color:var(--muted);text-decoration:none}.navlink:hover{color:var(--text)}
+    .hero{padding:78px 0 62px;display:grid;grid-template-columns:1.2fr .8fr;gap:42px;align-items:center}
+    .eyebrow{color:var(--mint);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.03;letter-spacing:-.055em;margin:18px 0 22px;max-width:720px}
+    h1 span{color:var(--mint)}.lead{font-size:18px;color:#b8c5dc;max-width:640px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 17px;border-radius:12px;text-decoration:none;font-weight:700;font-size:14px;border:1px solid var(--line)}.btn.primary{background:var(--mint);color:#071322;border-color:var(--mint)}.btn:hover{transform:translateY(-1px)}
+    .preview{border:1px solid #34435e;border-radius:22px;background:linear-gradient(160deg,#17243a,#0e1628);padding:20px;box-shadow:0 25px 90px #0005}
+    .preview-head{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);margin-bottom:22px}.dot{width:8px;height:8px;border-radius:50%;background:var(--mint);display:inline-block;margin-right:7px}
+    .metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.metric{border:1px solid var(--line);background:#0c1424;border-radius:14px;padding:15px}.metric small{display:block;color:var(--muted);font-size:12px}.metric strong{display:block;font-size:22px;margin-top:6px}.metric em{font-style:normal;color:var(--mint);font-size:11px}
+    .bars{margin-top:18px;padding:16px;border:1px solid var(--line);border-radius:14px}.bars small{color:var(--muted)}.barrow{display:flex;align-items:center;gap:10px;margin-top:12px;font-size:11px;color:var(--muted)}.bar{height:7px;background:#26354d;border-radius:8px;flex:1;overflow:hidden}.bar i{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,var(--mint),var(--blue))}
+    .note{font-size:11px;color:#7f90ad;margin-top:14px}
+    section{padding:46px 0}.section-top{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:22px}h2{font-size:30px;letter-spacing:-.035em;margin:0} .section-top p{color:var(--muted);max-width:540px;margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:#111a2c;border:1px solid var(--line);border-radius:17px;padding:22px}.icon{width:38px;height:38px;border-radius:12px;background:#7ce7c41a;color:var(--mint);display:grid;place-items:center;font-size:18px}.card h3{font-size:17px;margin:15px 0 7px}.card p{color:var(--muted);font-size:14px;margin:0}
+    .files{border:1px solid var(--line);border-radius:18px;overflow:hidden}.file{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 20px;background:#111a2c;border-bottom:1px solid var(--line);text-decoration:none}.file:last-child{border-bottom:0}.file:hover{background:#17233a}.file strong{display:block;font-size:14px}.file small{color:var(--muted)}.arrow{color:var(--mint);font-size:20px}
+    .disclaimer{border:1px solid #66582e;background:#2c2618;border-radius:16px;padding:20px 22px;color:#f5dfad;font-size:14px}.disclaimer strong{display:block;margin-bottom:4px;color:#ffe8aa}
+    footer{margin-top:45px;border-top:1px solid #ffffff14;padding:24px 0 36px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:52px}.preview{max-width:600px}.cards{grid-template-columns:1fr}.section-top{display:block}.section-top p{margin-top:8px}.navlink{display:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="brand"><div class="mark">V</div> VELOOP <span style="color:var(--muted);font-weight:500">/ ANALYTICS</span></div>
+      <a class="navlink" href="#work">PROJECT FILES&nbsp; ↘</a>
+    </nav>
+    <main>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Data analytics · Portfolio project</div>
+          <h1>Make product data <span>decision-ready.</span></h1>
+          <p class="lead">A practical analytics blueprint for rewards and user behavior: data quality, event instrumentation, KPI definitions, analytical modeling, and dashboard planning.</p>
+          <div class="actions">
+            <a class="btn primary" href="https://github.com/paridhi1806/VELOOP-Rewards-Data-Analytics">Explore GitHub ↗</a>
+            <a class="btn" href="#work">View project assets ↓</a>
+          </div>
+        </div>
+        <aside class="preview" aria-label="Illustrative dashboard preview">
+          <div class="preview-head"><span><span class="dot"></span>Analytics blueprint</span><span>OVERVIEW</span></div>
+          <div class="metric-grid">
+            <div class="metric"><small>Data quality</small><strong>01</strong><em>Profile & validate</em></div>
+            <div class="metric"><small>Measurement</small><strong>02</strong><em>Define KPIs</em></div>
+            <div class="metric"><small>Event tracking</small><strong>03</strong><em>Audit the schema</em></div>
+            <div class="metric"><small>Delivery plan</small><strong>04</strong><em>Prioritize next steps</em></div>
+          </div>
+          <div class="bars"><small>ANALYTICS WORKFLOW</small>
+            <div class="barrow"><span>Profile</span><div class="bar"><i style="width:92%"></i></div></div>
+            <div class="barrow"><span>Model</span><div class="bar"><i style="width:74%"></i></div></div>
+            <div class="barrow"><span>Measure</span><div class="bar"><i style="width:65%"></i></div></div>
+            <div class="barrow"><span>Deliver</span><div class="bar"><i style="width:48%"></i></div></div>
+          </div>
+          <div class="note">Illustrative design preview only — not live metrics or a connected dashboard.</div>
+        </aside>
+      </div>
+      <section>
+        <div class="section-top"><h2>What the project covers</h2><p>From understanding raw workbooks to preparing a defensible analytics plan with explicit assumptions and data gaps.</p></div>
+        <div class="cards">
+          <article class="card"><div class="icon">⌕</div><h3>Data quality & profiling</h3><p>Missingness, duplicate rows, repeated identifiers, schema consistency, and field-level checks.</p></article>
+          <article class="card"><div class="icon">◫</div><h3>KPI & data modeling</h3><p>Proposed analytical entities, metric definitions, event requirements, and measurement caveats.</p></article>
+          <article class="card"><div class="icon">↗</div><h3>Dashboard planning</h3><p>A reporting blueprint, verification register, and prioritized implementation backlog.</p></article>
+        </div>
+      </section>
+      <section id="work">
+        <div class="section-top"><h2>Project files</h2><p>Source materials published in the repository. The original user-level workbooks are intentionally excluded.</p></div>
+        <div class="files">
+          <a class="file" href="https://github.com/paridhi1806/VELOOP-Rewards-Data-Analytics/blob/main/README.md"><span><strong>Project README</strong><small>Scope, usage, limitations, and privacy</small></span><span class="arrow">↗</span></a>
+          <a class="file" href="https://github.com/paridhi1806/VELOOP-Rewards-Data-Analytics/blob/main/VELOOP_Analytics_Starter_SQL.sql"><span><strong>SQL starter</strong><small>Proposed schema and example queries</small></span><span class="arrow">↗</span></a>
+          <a class="file" href="https://github.com/paridhi1806/VELOOP-Rewards-Data-Analytics/blob/main/profile_veloop_data.py"><span><strong>Python profiling script</strong><small>Reusable Excel workbook checks</small></span><span class="arrow">↗</span></a>
+          <a class="file" href="https://github.com/paridhi1806/VELOOP-Rewards-Data-Analytics/blob/main/README_VELOOP_Project.txt"><span><strong>Project handoff notes</strong><small>Data gaps and recommended next steps</small></span><span class="arrow">↗</span></a>
+        </div>
+      </section>
+      <section>
+        <div class="disclaimer"><strong>Important: simulated data</strong>This is a portfolio blueprint based on simulated/fictional datasets. It is not an operational VELOOP product, and the visual preview does not show live company metrics. Reward ledger, wallet transaction, withdrawal lifecycle, referral relationship, and support-ticket sources were not present in the supplied workbooks.</div>
+      </section>
+    </main>
+    <footer><span>VELOOP Rewards Data Analytics · Portfolio blueprint</span><span>Built as a static site · Responsive layout</span></footer>
+  </div>
+</body>
+</html>
